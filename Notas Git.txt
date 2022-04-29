@@ -25,7 +25,6 @@ git branch -d <nombreRama> -> Borrar rama localmente
 git merge <nombreRama> -> Indicar de qué rama se extraen cambios
 
 -Resolución de conflictos-
-<Supongamos que esto es un error>
 1. Merge commit
 	- Hay que resolver confictos al momento de hacer el merge
 2. Rebase y luego merge
