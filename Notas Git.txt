@@ -9,3 +9,27 @@ git add . -> Preparar todos los archivos para subir
 	git restore --staged <nombreArchivo> -> Hacer "unstage" de archivo que acabamos de hacer "add"
 git commit -m "<descripción del cambio>" -> Subir un stage al repositorio
 git push -> Se sincronizan los cambios con "origin/main"
+
+-Descargar cambios-
+git fetch -> Actualizar historial de commits
+git pull -> Se sincronizan los cambios con "origin/main"
+
+-Ramas-
+Una rama es una subdivisión de otra rama a partir de cierto punto
+
+git checkout -b "<nombreRama>" -> Crear una rama, de forma local e ir a ella
+git push --set-upstream origin <nombreRama> -> Subir rama al repositorio
+git checkout <nombreRama> -> Ir a rama seleccionada
+git branch -d <nombreRama> -> Borrar rama localmente
+	git push origin --delete <nombreRama> -> Borrar rama remotamente
+git merge <nombreRama> -> Indicar de qué rama se extraen cambios
+
+-Resolución de conflictos-
+<Supongamos que esto es un error>
+1. Merge commit
+	- Hay que resolver confictos al momento de hacer el merge
+2. Rebase y luego merge
+	- Rebase cambia el punto de partida de la rama
+	- Al hacer rebase resolvemos conflictos
+	- Para terminar el rebase hay que hacer un "force push"
+	- Una vez terminado el rebase, podemos hacer merge sin conflictos
